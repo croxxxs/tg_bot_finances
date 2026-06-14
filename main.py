@@ -1,10 +1,9 @@
-from aiogram import Bot, Dispatcher, executor, types
+from aiogram import Bot, Dispatcher, types
 import os
 
-API_TOKEN = os.getenv("TG_BOT_TOKEN", "YOUR_TELEGRAM_BOT_TOKEN_HERE")
 
-bot = Bot(token=API_TOKEN)
-dp = Dispatcher(bot)
+bot = Bot(token='8987120064:AAEzimO5D5O51DgAcHBiA3BZFIrdf6YmvOU')
+dp = Dispatcher()
 
 # Общая клавиатура (reply)
 main_kb = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
@@ -102,4 +101,4 @@ async def fallback(message: types.Message):
     await message.answer("❓ Неизвестная команда. Нажмите /help для списка команд.", reply_markup=main_kb)
 
 if __name__ == "__main__":
-    executor.start_polling(dp, skip_updates=True)
+    dp.start_polling(bot)
