@@ -8,7 +8,7 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 from aiogram import F
 
 DB_PATH = os.getenv("DB_PATH", "finance.db")
-API_TOKEN = os.getenv("TG_BOT_TOKEN",'8987120064:AAE0jozEDqkauZIXt0ziX4ZXfu-tgYpaCfQ')  # обязательно задать
+API_TOKEN = os.getenv("TG_BOT_TOKEN",'...')  # обязательно задать
 
 if not API_TOKEN:
     raise SystemExit("Set TG_BOT_TOKEN environment variable")
